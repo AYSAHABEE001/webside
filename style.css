@@ -170,7 +170,7 @@ footer{
     flex-direction: row; /* KEY PART */
     width: 100%;
     padding: 0;
-    margin-top: 10px;
+    margin-top: px;
     z-index: 1000;
   
     
@@ -184,7 +184,7 @@ footer{
 
   .manu ul li a {
     width: 100%;
-    font-size: 11px;
+    font-size: 8px;
   }
 
   /* Footer responsiveness */
@@ -203,7 +203,7 @@ footer{
     padding: 5px;
   }
   main{
-    margin-top: -12px;
+    margin-top: -20px;
   }
   .logo img {
   border: 5px dashed white;
