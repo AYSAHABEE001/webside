@@ -16,8 +16,24 @@ function hideMenu(e) {
   }
 }
 
-nav.addEventListener('click', (e) => {
-  e.stopPropagation();
-  toggleMenu();
+// ===== SELECT ELEMENTS SAFELY =====
+const ay = document.body;
+const deen = document.getElementById('manu');
+const darkToggle = document.getElementById('darkModeToggle');
+
+// ===== DARK MODE (SAFE) =====
+if (localStorage.getItem('darkMode') === 'enabled') {
+  ay.classList.add('dark');
+}
+
+darkToggle.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  body.classList.toggle('dark');
+
+  if (body.classList.contains('dark')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
+  }
 });
-body.addEventListener('click', hideMenu);
